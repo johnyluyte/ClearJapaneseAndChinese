@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Configure</title>
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap/darkly.min.css">
+    <link rel="stylesheet" type="text/css" href="config.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Static navbar -->
+      <div class="navbar navbar-default" role="navigation" id="Navbar">
+      </div>
+      <!-- Navigator ends here -->
+    
+      <!-- TODO 加上 Advance setting page, 日文網站自動套用日文字型設定，中文網站自動套用中文字型設定 -->
+      <!-- TODO Advance setting page 就不用分語言，直接三種語言一起寫在同一個頁面 -->
+      <hr>
+      <h1>進階選項</h1>
+      <p>這個頁面提供更多關於 ClearCJ 的使用設置。</p>
+
+
+      <hr>
+      <h1>設定例外網站</h1>
+      <p>ClearJC 的主要精神是取代掉頁面的 font-family，而有些網站(例如 github 等) 會使用 <a href="https://stackoverflow.com/questions/16005795/how-to-implement-icon-fonts-like-github-com" target="_blank">icon font</a> 來達到其設計需求，由於這類 icon font 依賴於相關字型，故當使用者開啟 ClearJC 瀏覽這類網站時，icon font 將無法正確顯示，請看下圖例子：</p>
+      []這邊付上圖片說明
+
+      <p>
+        使用者可以在這裡設置 excluded
+        用類似 stay focus 的 UI
+      </p>
+
+      <p>
+      根據
+      https://stackoverflow.com/questions/4508167/css-how-to-get-the-browsers-default-font-family
+      CSS 基本上無法 unload CSS
+      雖然理論上可以用 TAG 等方式達到效果，但沒有必要，用 exclude 比較直覺
+      </p>
+
+
+      <h1>footer, bootstrap, github</h1>
+      http://glyphicons.com/license/
+      You must always add link to www.glyphicons.com
+      include the CC-BY license
+
+    </div> <!-- /container -->
+
+  <!-- Insert External Sctips Here -->
+  <script src="../lib/jquery.min.js"></script>  
+  <script src="../lib/bootstrap/bootstrap.min.js"></script>
+  <script src='config.js'></script>
+  </body>
+</html>

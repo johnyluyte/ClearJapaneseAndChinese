@@ -1,0 +1,24 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size:200%;
+}
+.navbar {
+    margin-bottom: 20px;
+}
+td{
+  font-size:1.8rem;
+}
+.alert{
+  margin: 15px 0px 10px 0px;
+  color: black;
+}
+h1{
+  color: #fff548;
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to ClearCJ</title>
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap/darkly.min.css">
+    <link rel="stylesheet" type="text/css" href="config.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Static navbar -->
+      <div class="navbar navbar-default" role="navigation" id="Navbar">
+      </div>
+      <!-- Navigator ends here -->
+    
+      <hr>
+      在這些說明頁面中，要儲存預設值進入 storage，否則安裝完外掛時，這三個值會是空白的
+      三個 
+      1. css_customized
+      2. auto_apply
+      3. current_font_name
+      要寫在說明裡面
+      <h1>Welcome!</h1>
+      <p>感謝您安裝 ClearCJ chrome extension。</p>
+      <p>中文使用者長期飽受破碎字型之苦，雖然網路上有一些解決方案，但大多需要修改特殊檔案，令一般使用者怯步。</p>
+      <p>ClearCJ 除了可以一鍵美化字體外，也提供簡易的選單化設定，讓所有使用者都能輕鬆獲得最好的視覺體驗。</p>
+      [放三張圖]
+      <p>接下來，我們就來一步步完成基本設定(大約5分鐘內)。</p>
+
+      <hr>
+      <h1>安裝核心字體</h1>
+      <p>ClearCJ 主要支援兩類型字體，分別是微軟的 <a href="https://zh.wikipedia.org/wiki/%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91" target="_blank">微軟雅黑體(Microsoft YaHei)</a>(TODO 微軟正黑體以及日文字體哩) 以及 Google 和 Adobe 合作推出的 <a href="http://www.google.com/get/noto/" target="_blank"> 思源黑體(Noto Sans T Chinese) </a>，使用者必須安裝以上至少一種字型，才能獲得最佳字體美化功能。</p>
+      <li><span style="color:yellow;">微軟雅黑體</span>：為 Windows Vista, Windows 7 的預設字體，Windows 使用者不必另外安裝。</li>
+      <li><span style="color:yellow;">思源黑體</span>：可至 <a href="http://www.google.com/get/noto/" target="_blank"> 官方網站 </a> 免費下載，或參考電腦玩物的<a href="http://www.playpcesor.com/2014/07/source-han-sans-cht-adobe-google.html" target="_blank"> 教學文</a>。</li>
+      <div class="alert alert-dismissable alert-success">
+        <button type="button" class="close">※</button>
+        <p>若您是 Windows 系統的使用者，建議先嘗試 ClearCJ 搭配 <i>微軟雅黑體</i> 或 <i>微軟正黑體</i>，如不滿意再下載 <i>思源黑體</i>。</p>
+      </div>             
+      <div class="alert alert-dismissable alert-warning">
+        <button type="button" class="close">※</button>
+        <p>若您沒安裝某些字體(e.g.思源黑體)，則此外掛內該字體(e.g.思源黑體)的選項都不會產生作用。</p>
+      </div>
+      <p>※ 若您希望 ClearCJ 支援其他字體(開源、免費為佳)，請至 github 提出建議，謝謝。</p>
+ 
+      <hr>
+
+      <h1>檢查字體支援狀況</h1>
+      <h2>這邊放上改變字體大小的按鈕，使用者按了之後可以改變下表的字體大小</h2>
+      這個勒
+      http://derek1906.site50.net/works/jfont.php
+      <table class="table table-striped table-hover ">
+        <thead>
+          <tr class="info">
+            <th class="col-md-4">各種字體</th>
+            <th class="col-md-4">例句</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>預設字體</td>
+            <td>今天天氣真好</td>
+          </tr>
+          <tr>
+            <td>微軟雅黑體 Microsoft YaHei</td>
+            <td id="MS_YaHei">今天天氣真好</td>
+          </tr>          
+          <tr>
+            <td>微軟正黑體 Microsoft JhengHei</td>
+            <td id="MS_JhengHei">今天天氣真好</td>
+          </tr>
+          <tr>
+            <td>思源黑體 Noto Sans Thin</td>
+            <td id="NS_Thin">今天天氣真好</td>
+          </tr>          
+          <tr>
+            <td>思源黑體 Noto Sans Light</td>
+            <td id="NS_Light">今天天氣真好</td>
+          </tr>
+          <tr>
+            <td>思源黑體 Noto Sans DemiLight</td>
+            <td id="NS_DemiLight">今天天氣真好</td>
+          </tr>
+          <tr>
+            <td>思源黑體 Noto Sans Regular</td>
+            <td id="NS_Regular">今天天氣真好</td>
+          </tr>
+          <tr>
+            <td>思源黑體 Noto Sans Medium</td>
+            <td id="NS_Medium">今天天氣真好</td>
+          </tr>
+          <tr>
+            <td>思源黑體 Noto Sans Bold</td>
+            <td id="NS_Bold">今天天氣真好</td>
+          </tr>
+          <tr>
+            <td>思源黑體 Noto Sans Black</td>
+            <td id="NS_Black">今天天氣真好</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="alert alert-dismissable alert-success">
+        <button type="button" class="close">※</button>
+        <p>若您有正確安裝上述所有字體，則上面表格看起來應該要類似下圖。  重新截圖!!!!!!!!!!</p>
+        <p>或參考 http://jsfiddle.net/JohnnyWorker/J326C/ (我自己 fork 一份?)</p>
+      </div>
+      <img src="check-font.png" class="center">
+      <div class="alert alert-dismissable alert-warning">
+        <button type="button" class="close">※</button>
+        <p>再次提醒，您的電腦必須支援上表中至少一種字體，ClearCJ 才能作用。</p>
+      </div>
+
+      <hr>
+      推薦： 沒用 MacType 的話，使用 思源黑體 Noto Sans Regular 或 思源黑體 Noto Sans Medium 或 思源黑體 Noto Sans Bold
+      推薦： 有用 MacType 的話，使用 微軟雅黑體 Microsoft YaHei 效果最好(MacType記得打開)
+
+      <h1>副圖片的設定解說</h1>
+      *按此關閉效果 並不是回復原本的 style，而是套用 sans-serif，詳情請見 configure 那頁面
+      日文要怎樣才能弄得跟 pyonn pyonn 那張一樣漂亮呢?
+      更改日文順序?
+      還是要加上"某些網址套用某些設定"的功能~?
+      <h1>常見問題</h1>
+      <h1>進階設定</h1>
+      <h1>demo 圖片影片</h1>
+      <h1>footer, bootstrap, github</h1>
+      http://glyphicons.com/license/
+You must always add link to www.glyphicons.com
+include the CC-BY license
+      <h1>About (version, history..)</h1>
+
+    <p>
+      https://developer.chrome.com/webstore/i18n?hl=en/
+  第一次時先詢問使用者 字體
+以免啟動到使用者電腦內沒有的字體
+how to check if the user has a specific font?
+for windows only!?
+多國語言
+日文用 メイリオ
+記得把 mactype 拿掉之後看效果..
+用交大金城武看效果
+issue: 
+用 chrome.tabs.onUpdated 的話，會讀取兩次..
+</p>
+
+    </div> <!-- /container -->
+
+  <!-- Insert External Sctips Here -->
+  <script src="../lib/jquery.min.js"></script>  
+  <script src="../lib/bootstrap/bootstrap.min.js"></script>
+  <script src='config.js'></script>
+  </body>
+</html>

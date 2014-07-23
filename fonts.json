@@ -1,0 +1,77 @@
+{
+  "fonts": [
+    {
+      "name": "微軟雅黑體",
+      "label": "微軟雅黑體 Microsoft YaHei",
+      "value": "MS_YaHei",
+      "fontFamily": "Microsoft YaHei"
+    },
+    {
+      "name": "微軟正黑體",
+      "label": "微軟正黑體 Microsoft JhengHei",
+      "value": "MS_JhengHei",
+      "fontFamily": "Microsoft JhengHei"
+    },
+    {
+      "name": "思源 Thin",
+      "label": "思源黑體 Noto Sans Thin",
+      "value": "NS_Thin",
+      "fontFamily": "Noto Sans T Chinese Thin"
+    },
+    {
+      "name": "思源 Light",
+      "label": "思源黑體 Noto Sans Light",
+      "value": "NS_Light",
+      "fontFamily": "Noto Sans T Chinese Light"
+    },
+    {
+      "name": "思源 DemiLight",
+      "label": "思源黑體 Noto Sans DemiLight",
+      "value": "NS_DemiLight",
+      "fontFamily": "Noto Sans T Chinese DemiLight"
+    },
+    {
+      "name": "思源 Regular",
+      "label": "思源黑體 Noto Sans Regular",
+      "value": "NS_Regular",
+      "fontFamily": "Noto Sans T Chinese Regular"
+    },
+    {
+      "name": "思源 Medium",
+      "label": "思源黑體 Noto Sans Medium",
+      "value": "NS_Medium",
+      "fontFamily": "Noto Sans T Chinese Medium"
+    },
+    {
+      "name": "思源 Bold",
+      "label": "思源黑體 Noto Sans Bold",
+      "value": "NS_Bold",
+      "fontFamily": "Noto Sans T Chinese Bold"
+    },
+    {
+      "name": "思源 Black",
+      "label": "思源黑體 Noto Sans Black",
+      "value": "NS_Black",
+      "fontFamily": "Noto Sans T Chinese Black"
+    },
+    {
+      "name": "標楷體",
+      "label": "標楷體 DFKai-SB",
+      "value": "DFKai-SB",
+      "fontFamily": "DFKai-SB"
+    },
+    {
+      "name": "新細明體",
+      "label": "新細明體 PMingLiU",
+      "value": "PMingLiU",
+      "fontFamily": "PMingLiU"
+    },
+    {
+      "name": "sans-serif",
+      "label": "sans-serif",
+      "value": "sans-serif",
+      "fontFamily": "",
+      "_fontFamily_comment": "We left it empty since 'sans-serif' is the default fontFamily"
+    }
+  ]
+}
