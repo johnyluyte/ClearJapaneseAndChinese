@@ -119,6 +119,7 @@
       更改日文順序?
       還是要加上"某些網址套用某些設定"的功能~?
       <h1>常見問題</h1>
+      要開新網頁才會作用!!
       <h1>進階設定</h1>
       <h1>demo 圖片影片</h1>
       <h1>footer, bootstrap, github</h1>
@@ -126,7 +127,21 @@
 You must always add link to www.glyphicons.com
 include the CC-BY license
       <h1>About (version, history..)</h1>
+最一開始的方法: user style sheet 但後來被改掉了
+變成要手動加入 chrome extension (網站連結)
+但缺點
+1. 不能同步
+2. 不能加例外網址
+3. 
+在這邊要寫概念以及 code 的做法
+content script, popup 等等分別做什麼
 
+用 insertCSS 的話，有些時候文字會位移很嚴重(字型寬度不一?)
+google 試算表更可能出現 選取的框框 跟 真正點到的格子不一樣的情形
+chrome.tabs.onUpdated 的問題
+
+License
+希望大家能幫忙改善
     <p>
       https://developer.chrome.com/webstore/i18n?hl=en/
   第一次時先詢問使用者 字體

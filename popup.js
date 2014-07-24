@@ -1,5 +1,4 @@
-
-// 最後要記得把 fucntion 切乾淨一點
+// TODO: add informative comment, function refactory, code refactory
 
 function getFontFamily(value){
   var fontFamily = '*{font-family:';
@@ -33,8 +32,16 @@ function getSelected(){
 }
 
 
+
 function applyCSS(parameter){
-  /* here the CSS(The customizeded fonts) is injected to the browser(contents) */
+  /* Get the current tab the User is viewing, which is returned as tabs[0]. */
+  chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
+    /* 
+       Send a message to tabs[0], telling the 'content_script.js' to disable ClearJC style,
+       which was added automatically by 'content_script.js' if the 'auto_apply' was 'true' in Storage.
+    */
+    chrome.tabs.sendMessage(tabs[0].id, { text: "disable_ClearJC_Style_Id" });
+  }); 
   chrome.tabs.insertCSS(null, parameter);
   console.debug("[applyCSS()]" + parameter.code);
 }
@@ -48,14 +55,10 @@ function showMessage(msg){
 
 $(function(){
   /* One click activate */
-  $("#btn_activate").click(function(event){
-    chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
-      // console.log(tabs[0].url);
-      chrome.runtime.getBackgroundPage(function (backgroundPage) {
-        backgroundPage.injectCSStoTab(tabs[0]);
-      });
-    });    
-  });
+  // $("#btn_activate").click(function(event){
+  //     load CSS from Storage.
+  //     apply CSS
+  // });
   $("#btn_deactivate").click(function(event){
     applyCSS(css_sans_serif);
   });
@@ -74,15 +77,8 @@ $(function(){
     });
 
     $("#span_title_current_font").text(current_applied_font_name);
-    chrome.storage.sync.set({'current_font_name': current_applied_font_name}, function() {
+      chrome.storage.sync.set({'current_font_name': current_applied_font_name}, function() {
     });
-
-    /* 要儲存三個東西
-      1. css_customized:
-        *{font-family:"Microsoft YaHei" !important;}
-      2. current_applied_font_name:
-        微軟雅黑體
-    */
   });
 
   /* Advanced settings */

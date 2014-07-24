@@ -11,42 +11,55 @@
 //   console.debug("successfully clear()");
 // });
 
-chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-  /* Check if the user want ClearJC to automatically inject CSS to every page. */
-  chrome.storage.sync.get('auto_apply', function(data){
-    if(data.auto_apply=="true"){
-      injectCSStoTab(tab);
-    }
-  });
-});
 
-function injectCSStoTab(tab){
-  if(isValidURL(tab.url)){
-    chrome.storage.sync.get('css_code', function(data){
-      injectCSS(setCSS(data.css_code));
-    });
-  }
-}
+// 改用 content script?
+// chrome.tabs.onActivated.addListener(function(activeInfo) {
+//   chrome.tabs.get(activeInfo.tabId, function(tab){
+//     /* Check if the user want ClearJC to automatically inject CSS to every page. */
+//     chrome.storage.sync.get('auto_apply', function(data){
+//       if(data.auto_apply=="true"){
+//         injectCSStoTab(tab);
+//       }
+//     });
+//   });
+// });
 
-function isValidURL(url){
-  /* We only inject CSS to URLs with "http://" or "https://" prefix */
-  if(url.match(/http[s]?:\/\/*/)){
-    return true;
-  }
-  return false;
-}
+// chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+//   /* Check if the user want ClearJC to automatically inject CSS to every page. */
+//   chrome.storage.sync.get('auto_apply', function(data){
+//     if(data.auto_apply=="true"){
+//       injectCSStoTab(tab);
+//     }
+//   });
+// });
 
-function setCSS(css_code){
-  css_customized = {
-    code: css_code,
-    allFrames: true
-  };
-  return css_customized;
-}
+// function injectCSStoTab(tab){
+//   if(isValidURL(tab.url)){
+//     chrome.storage.sync.get('css_code', function(data){
+//       injectCSS(setCSS(data.css_code));
+//     });
+//   }
+// }
 
-function injectCSS(parameter){
-  /* here the CSS(The customizeded fonts) is injected to the browser(contents) */
-  chrome.tabs.insertCSS(null, parameter);
-  console.debug("[injectCSS()]" + parameter.code);
-}
+// function isValidURL(url){
+//   /* We only inject CSS to URLs with "http://" or "https://" prefix */
+//   if(url.match(/http[s]?:\/\/*/)){
+//     return true;
+//   }
+//   return false;
+// }
+
+// function setCSS(css_code){
+//   css_customized = {
+//     code: css_code,
+//     allFrames: true
+//   };
+//   return css_customized;
+// }
+
+// function injectCSS(parameter){
+//   /* here the CSS(The customizeded fonts) is injected to the browser(contents) */
+//   chrome.tabs.insertCSS(null, parameter);
+//   console.debug("[injectCSS()]" + parameter.code);
+// }
 

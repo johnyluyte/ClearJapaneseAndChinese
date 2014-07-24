@@ -7,34 +7,50 @@
     <link rel="stylesheet" type="text/css" href="popup.css">    
   </head>
   <body>
-
+    <!-- 用 logo 來撐住寬度!! -->
+    <img src="logo.png">
       <div class="list-group">
         <h5 class="list-group-item active listCeter">
           目前字體：
           <strong><span id="span_title_current_font">微軟雅黑體</span></strong>
         </h5>
-        <a class="list-group-item" id="btn_activate"><span class="glyphicon glyphicon-ok"></span> 按此啟動字體效果</a>
+        <!-- <a class="list-group-item" id="btn_activate"><span class="glyphicon glyphicon-ok"></span> 按此啟動字體效果</a> -->
+        <span class="list-group-item">
+          <p>選擇欲套用的字體：</p>
+          <div id="div_select">
+          </div>
+<!-- <div class="btn-group btn-group-justified">
+  <div class="btn-group">
+    <button type="button" class="btn btn-default">Left</button>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default">Right</button>
+  </div>
+</div>         -->    
+        <div class="bs-component">
+          <a class="list-group-item" id="btn_apply_selected" data-toggle="tooltip" data-placement="bottom" data-original-title="僅套用在目前頁面，換頁後效果就會消失，適合測試用。">套用</a>
+           <a class="list-group-item" id="btn_set_selected_as_default" data-toggle="tooltip" data-placement="bottom" data-original-title="將這個設定設為預設值。"><span class="glyphicon glyphicon-heart"></span> 設為預設</a>            
+<!--             <button class="btn btn-success" id="btn_apply_selected" data-toggle="tooltip" data-placement="bottom" data-original-title="僅套用在目前頁面，換頁後效果就會消失，適合測試用。">套用</button>
+            <button class="btn btn-warning" id="btn_set_selected_as_default" data-toggle="tooltip" data-placement="bottom" data-original-title="將這個設定設為預設值。"><span class="glyphicon glyphicon-heart"></span> 設為預設</button> -->
+        </div>          
+        </span>
+
+
+
+        </span class="list-group-item">
         <a class="list-group-item" id="btn_deactivate"><span class="glyphicon glyphicon-remove"></span> 按此關閉效果</a>
-      </div>
-      
-      <div id="div_msg">
+        <div id="show_message"></div>
       </div>
 
-      <div class="panel panel-success">
+
+
+<!--       <div class="panel panel-success">
         <div class="panel-heading">
           <h5 class="panel-title">基本設定</h5>
         </div>
         <div class="panel-body">
-          <p>選擇欲套用的字體</p>
-          <div id="div_select">
-          </div>
-          <div class="bs-component">
-            <button class="btn btn-success" id="btn_apply_selected" data-toggle="tooltip" data-placement="bottom" data-original-title="僅套用在目前頁面，換頁後效果就會消失，適合測試用。">套用</button>
-            <button class="btn btn-warning" id="btn_set_selected_as_default" data-toggle="tooltip" data-placement="bottom" data-original-title="將這個設定設為預設值。"><span class="glyphicon glyphicon-heart"></span> 設為預設</button>
-          </div>
-          <div id="show_message"></div>
         </div>
-      </div>
+      </div> -->
 
       <div class="panel panel-info">
         <div class="panel-heading" id="div_advanced_setting_heading">

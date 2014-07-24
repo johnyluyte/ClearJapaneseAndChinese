@@ -15,11 +15,22 @@
     "default_popup": "popup.html"
   },
 
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  }
+  // "background": {
+  //   "scripts": ["background2.js"],
+  //   "persistent": false
+  // },
 
+  "content_scripts": [ 
+    {
+      "js": [ "lib/jquery.min.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+    }, 
+    {
+      "js": [ "cs.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+    }]
   // "content_scripts": [ {
   //   "js": ["background.js"],
   //   "matches": [ 
