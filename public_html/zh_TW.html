@@ -28,6 +28,29 @@
       <p>接下來，我們就來一步步完成基本設定(大約5分鐘內)。</p>
 
       <hr>
+      <!-- 
+        有沒有辦法用 @font-face 的方式讓使用者預覽字體? 但是這樣的話，下載字體時間會不會太久(Noto字體檔案大)
+        日文字體 
+        http://kanjialive.com/2013/04/selecting-a-better-japanese-font-for-windows-web-browsers/
+        http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/design/index-en.html#ja
+        http://mplus-fonts.sourceforge.jp/#
+        http://www.macwright.org/2014/07/09/mplus.html
+        如果你的系統是 windows 7 就不用安裝，如果是 windows XP 或 98 95，請升級成 windows 7
+        Linux 怎麼辦!? 下載m+
+        
+        附加：inspired by
+        https://chrome.google.com/webstore/detail/%E9%83%A8%E5%88%86%E5%BC%B7%E5%88%B6%E3%83%A1%E3%82%A4%E3%83%AA%E3%82%AA%E3%81%A1%E3%82%83%E3%82%93/kmjcmncjhdnaealenhoohllicfkdojpb?hl=en
+
+        附加：使用的字體，以及其版權聲明
+
+        去網路上搜尋相關 日文或中文字體瀏覽器 的問題，推廣這個外掛
+        https://superuser.com/questions/400047/smooth-font-rendering-for-japanese-characters
+        重灌狂人等頁面宣傳
+        http://briian.com/22456/album-downloader-for-facebook.html
+        PTT
+
+        paypal donate 測試
+      -->
       <h1>安裝核心字體</h1>
       <p>ClearCJ 主要支援兩類型字體，分別是微軟的 <a href="https://zh.wikipedia.org/wiki/%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91" target="_blank">微軟雅黑體(Microsoft YaHei)</a>(TODO 微軟正黑體以及日文字體哩) 以及 Google 和 Adobe 合作推出的 <a href="http://www.google.com/get/noto/" target="_blank"> 思源黑體(Noto Sans T Chinese) </a>，使用者必須安裝以上至少一種字型，才能獲得最佳字體美化功能。</p>
       <li><span style="color:yellow;">微軟雅黑體</span>：為 Windows Vista, Windows 7 的預設字體，Windows 使用者不必另外安裝。</li>
@@ -103,6 +126,11 @@
         <p>若您有正確安裝上述所有字體，則上面表格看起來應該要類似下圖。  重新截圖!!!!!!!!!!</p>
         <p>或參考 http://jsfiddle.net/JohnnyWorker/J326C/ (我自己 fork 一份?)</p>
       </div>
+      <div class="alert alert-dismissable alert-success">
+        <button type="button" class="close">※</button>
+        <p>也有可能是因為 direct write 的問題所以看不到!!。  插入截圖!!!!</p>
+        <p>http://tieba.baidu.com/p/3272375844</p>
+      </div>      
       <img src="check-font.png" class="center">
       <div class="alert alert-dismissable alert-warning">
         <button type="button" class="close">※</button>
@@ -121,6 +149,8 @@
       <h1>常見問題</h1>
       要開新網頁才會作用!!
       <h1>進階設定</h1>
+      1. 設定例外網址 regex
+      2. 自行設定 style sheet {font-family:; 之類} 自己負責!
       <h1>demo 圖片影片</h1>
       <h1>footer, bootstrap, github</h1>
       http://glyphicons.com/license/

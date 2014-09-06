@@ -2,7 +2,8 @@
 global_style_id = "clearJC_Style_Id";
 
 /* We will not inject CSS to URLs that are excluded by the User*/
-// TODO:
+// TODO: 
+// coursera, http://dictionary.goo.ne.jp/
 function isValidURL(url){
   console.debug("[content_script isValidURL()] url=" + url);
   /* For example, if the URL "https://github.com/" is in the User's excluded list: */
@@ -37,6 +38,7 @@ function autoInjectCSS(css_code){
   style.appendChild(node);
   document.getElementsByTagName("head")[0].appendChild(style);  
   console.debug("[content_script autoInjectCSS()]" + css_code);
+  /* Activated 的時候，是不是應該要在網址列那邊顯示一個tip圖案，提示使用者"目前這個網頁的字體有被優化" */
 }
 
 
