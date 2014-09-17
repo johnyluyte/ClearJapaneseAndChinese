@@ -57,13 +57,14 @@ body{
   padding: 3px 30px 3px 10px;
   margin: 0px;
   font-size: 80%;
-  color:yellow;
+  /*color:yellow;*/
 }
 
 .alert-warning{
   padding: 3px 30px 3px 10px;
   margin: 0px;
   font-size: 80%;
+  color:#000000;
 }
 
 #div_advanced_setting_heading, #div_other_setting_heading{

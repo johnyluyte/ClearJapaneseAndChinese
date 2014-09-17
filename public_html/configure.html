@@ -17,10 +17,17 @@
       <!-- TODO Advance setting page 就不用分語言，直接三種語言一起寫在同一個頁面 -->
       <hr>
       <h1>進階選項</h1>
-      <p>這個頁面提供更多關於 ClearCJ 的使用設置。</p>
+      <p>這個頁面提供更多關於 Clear Japanese and Chinese 的使用設置。</p>
+
+      未來預計提供：
+      <li>讓使用者自行設定例外網址 regex</li>
+      <li>讓使用者自行設定 style sheet {font-family:; 之類}</li>
 
 
       <hr>
+ <!--      <h1>進階設定</h1>
+      1. 設定例外網址 regex
+      2. 自行設定 style sheet {font-family:; 之類} 自己負責!      
       <h1>設定例外網站</h1>
       <p>ClearJC 的主要精神是取代掉頁面的 font-family，而有些網站(例如 github 等) 會使用 <a href="https://stackoverflow.com/questions/16005795/how-to-implement-icon-fonts-like-github-com" target="_blank">icon font</a> 來達到其設計需求，由於這類 icon font 依賴於相關字型，故當使用者開啟 ClearJC 瀏覽這類網站時，icon font 將無法正確顯示，請看下圖例子：</p>
       []這邊付上圖片說明
@@ -38,10 +45,20 @@
       </p>
 
 
-      <h1>footer, bootstrap, github</h1>
-      http://glyphicons.com/license/
-      You must always add link to www.glyphicons.com
-      include the CC-BY license
+    <p>
+      https://developer.chrome.com/webstore/i18n?hl=en/
+  第一次時先詢問使用者 字體
+以免啟動到使用者電腦內沒有的字體
+how to check if the user has a specific font?
+for windows only!?
+多國語言
+日文用 メイリオ
+記得把 mactype 拿掉之後看效果..
+用交大金城武看效果
+issue: 
+用 chrome.tabs.onUpdated 的話，會讀取兩次..
+</p> -->
+
 
     </div> <!-- /container -->
 

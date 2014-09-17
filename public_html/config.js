@@ -1,7 +1,7 @@
 function getNavi(page){
   var navi = '';
   // TODO 這邊改放 LOGO
-  navi += '<div class="container-fluid"><div class="navbar-header"><span class="navbar-brand">ClearCJ(這邊改放 LOGO)</span></div><div class="navbar-collapse collapse"><ul class="nav navbar-nav"><li';
+  navi += '<div class="container-fluid"><div class="navbar-header"><span class="navbar-brand">Clear Japanese and Chinese extension</span></div><div class="navbar-collapse collapse"><ul class="nav navbar-nav"><li';
   if(page=="zh_TW"){navi+=' class="active"';}
   navi += '><a href="zh_TW.html">台灣中文</a></li><li';
   if(page=="zh_CN"){navi+=' class="active"';}
