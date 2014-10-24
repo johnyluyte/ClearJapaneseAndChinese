@@ -1,31 +1,96 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Welcome to Clear Japanese and Chinese</title>
-    <link rel="stylesheet" type="text/css" href="../lib/bootstrap/darkly.min.css">
-    <link rel="stylesheet" type="text/css" href="config.css">
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Clear Japanese and Chinese</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <!-- <link rel="stylesheet" type="text/css" href="../lib/bootstrap/darkly.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="config.css">
+</head>
+<body>
+  <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
     <div class="container">
-      <!-- Static navbar -->
-      <div class="navbar navbar-default" role="navigation" id="Navbar">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="../" class="navbar-brand">ClearJ&C</a>
       </div>
-      <!-- Navigator ends here -->
-    
-      <hr>
-<!--       在這些說明頁面中，要儲存預設值進入 storage，否則安裝完外掛時，這三個值會是空白的
-      三個 
-      1. css_customized
-      2. auto_apply
-      3. current_font_name
-      要寫在說明裡面 -->
-      <h1>Welcome!</h1>
-      <p>感謝您安裝 Clear Japanese and Chinese chrome extension。</p>
-      <p>中文使用者長期飽受破碎字型之苦，雖然網路上有一些解決方案，但大多需要修改特殊檔案，令一般使用者怯步。</p>
-      <p>ClearJC 除了可以一鍵美化字體外，也提供簡易的選單化設定，讓所有使用者都能輕鬆獲得最好的視覺體驗。</p>
-      <!-- [//TODO這裡放三張 screenshot demo] -->
-      <p>接下來，我們就來一步步完成基本設定(大約5分鐘內)。</p>
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="../menu1">English</a>
+          </li>
+          <li>
+            <a href="../menu2">繁體中文</a>
+          </li>
+          <li>
+            <a href="../menu3">日本語</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<!--   <div class="bs-header" id="content">
+    <div class="container">
+      <h2>Clear Japanese and Chinese</h2>
+      <p>Some interesting catchy phrase better than Lorem ipsum.</p>
+    </div>
+  </div>
+ -->  <div class="container bs-docs-container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="bs-sidebar hidden-print" role="complementary">
+          <ul class="nav bs-sidenav">
+            <li class="li_center">
+              <h4>安裝</h4>
+            </li>
+            <li>
+              <a href="#introduction">1. ClearJ&C 是什麼</a>
+            </li>
+            <li>
+              <a href="#install_font">2. 安裝核心字體</a>
+            </li>
+            <li>
+              <a href="#three">Three</a>
+            </li>
+            <li class="li_center">
+              <h4>常見問題</h4>
+            </li>
+            <li>
+              <a href="#four">Four</a>
+            </li>
+            <li class="li_center">
+              <h4>進階設定</h4>
+            </li>
+            <li>
+              <a href="#four">Four</a>
+            </li>
+          </ul>
+        </div>
+        <!-- end bs-sidebar --> </div>
+      <!-- end col-md-3 -->
+
+      <div class="col-md-9">
+
+        <div>
+      <h1 id='welcome'>簡介</h1>
+      <p>感謝您安裝 Clear Japanese and Chinese chrome extension，以下簡稱 ClearJ&C。</p>
+      <p>ClearJ&C 可以讓使用者一鍵美化瀏覽器的 中文、日文字體。</p>
+      <!-- TODO: 這裡放三張 screenshot demo (使用前、使用後、ＭＡＣ)-->
+      <!-- TODO: 這裏放影片 demo -->
+      <div class="alert alert-dismissable alert-success">
+        <button type="button" class="close">※</button>
+        <p>ClearJ&C 是用來改善 Windows 上的 Chrome 字體，MAC 使用者不需要此外掛。</p>
+      </div>           
+
+      <p>Windows 的中文使用者長期飽受破碎字型之苦，而網路上的解決方案大多需要修改特殊檔案，令一般使用者怯步。</p>
+      <p>ClearJ&C 除了可以一鍵美化字體外，也提供簡易的選單化設定，讓所有使用者都能輕鬆獲得最好的視覺體驗。</p>
+      <p>在正式使用 ClearJ&C 之前，我們要先做基本設定(約5分鐘)。</p>
 
       <hr>
       <!-- 
@@ -51,14 +116,14 @@
 
         paypal donate 測試
       -->
-      <h1>安裝核心字體</h1>
+      <h1 id='install_font'>安裝核心字體</h1>
       <p>ClearJC 主要支援兩類型字體，分別是微軟的 <a href="https://zh.wikipedia.org/wiki/%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91" target="_blank">微軟雅黑體(Microsoft YaHei)</a>(//TODO 微軟正黑體以及日文字體哩) 以及 Google 和 Adobe 合作推出的 <a href="http://www.google.com/get/noto/" target="_blank"> 思源黑體(Noto Sans T Chinese) </a>，使用者必須安裝以上至少一種字型，才能獲得最佳字體美化功能。</p>
-      <li><span style="color:yellow;">微軟雅黑體</span>：為 Windows Vista, Windows 7 的預設字體，Windows 使用者不必另外安裝。</li>
-      <li><span style="color:yellow;">思源黑體</span>：可至 <a href="http://www.google.com/get/noto/" target="_blank"> 官方網站 </a> 免費下載，或參考電腦玩物的<a href="http://www.playpcesor.com/2014/07/source-han-sans-cht-adobe-google.html" target="_blank"> 教學文</a>。</li>
+      <li><span style="color:red;">微軟雅黑體</span>：為 Windows Vista, Windows 7 的預設字體，Windows 使用者不必另外安裝。</li>
+      <li><span style="color:red;">思源黑體</span>：可至 <a href="http://www.google.com/get/noto/" target="_blank"> 官方網站 </a> 免費下載，或參考電腦玩物的<a href="http://www.playpcesor.com/2014/07/source-han-sans-cht-adobe-google.html" target="_blank"> 教學文</a>。</li>
       <div class="alert alert-dismissable alert-success">
         <button type="button" class="close">※</button>
-        <p>若您是 Windows 系統的使用者，建議先嘗試 ClearJC 搭配 <i>微軟雅黑體</i> 或 <i>微軟正黑體</i>，如不滿意再下載 <i>思源黑體</i>。</p>
-      </div>             
+        <p>若您是 Windows 系統的使用者，建議先嘗試 <i>微軟雅黑體</i> 或 <i>微軟正黑體</i>，如不滿意再下載 <i>思源黑體</i>。</p>
+      </div>           
       <div class="alert alert-dismissable alert-warning">
         <button type="button" class="close">※</button>
         <p>若您沒安裝某些字體(e.g.思源黑體)，則此外掛內該字體(e.g.思源黑體)的選項都不會產生作用。</p>
@@ -163,6 +228,23 @@
       Q: 我只想在某些網頁套用 微軟雅黑體 字型，其他網頁都用預設，可以嗎?<br/>
       A: 現在不行，但我會在之後版本中加入這個功能，預計會用 Regex 表示 domain 的方式來實作。<br/>
 
+      Q: 如何將網站加入例外
+      A: 等 Regex 寫好後，會教你
+
+      <hr>
+      <h1 id="one">TODO:</h1>
+      要記得打開此 html 編輯，有很多註解<br>
+      推薦之中文字型<br>
+      推薦之日文字型<br>
+<!--       在這些說明頁面中，要儲存預設值進入 storage，否則安裝完外掛時，這三個值會是空白的
+      三個 
+      1. css_customized
+      2. auto_apply
+      3. current_font_name
+      要寫在說明裡面 -->
+
+      <hr>
+
 
       <!-- <h1>demo 圖片影片</h1> -->
       <h1>使用資源</h1>
@@ -170,29 +252,32 @@
       <li>bootwatch</li>
       <li>http://glyphicons.com/license/</li>
 <!-- You must always add link to www.glyphicons.com include the CC-BY license -->
-<!--       <h1>About (version, history..)</h1>
-最一開始的方法: user style sheet 但後來被改掉了
-變成要手動加入 chrome extension (網站連結)
-但缺點
-1. 不能同步
-2. 不能加例外網址
-3. 
-在這邊要寫概念以及 code 的做法
-content script, popup 等等分別做什麼
 
-用 insertCSS 的話，有些時候文字會位移很嚴重(字型寬度不一?)
-google 試算表更可能出現 選取的框框 跟 真正點到的格子不一樣的情形
-chrome.tabs.onUpdated 的問題
+        </div>
+        <div>
+          <h1 id="two">TWO</h1>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac felis sed eros bibendum tincidunt. In vel lectus sit amet velit ullamcorper sollicitudin eu lacinia nisi. Ut sagittis massa non ultricies hendrerit. Fusce non mauris augue. Phasellus imperdiet nisi quis ante commodo dignissim. Aenean vel bibendum ipsum. Proin lobortis lobortis felis nec aliquet. Nunc vestibulum quis enim eu venenatis. Vivamus consectetur justo nec quam euismod, ac pellentesque justo varius. Morbi vel dolor at nisi dictum convallis nec eu ligula. Duis consequat purus ut neque bibendum convallis. Aliquam tempor justo diam, sed dapibus diam laoreet aliquam. Curabitur feugiat neque quis nunc tincidunt porttitor. Integer in nulla metus. Proin pulvinar, massa quis bibendum ullamcorper, arcu arcu convallis mi, ut egestas eros dolor non lacus. Morbi id orci sapien.
+        </div>
+        <div>
+          <h1 id="three">THREE</h1>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac felis sed eros bibendum tincidunt. In vel lectus sit amet velit ullamcorper sollicitudin eu lacinia nisi. Ut sagittis massa non ultricies hendrerit. Fusce non mauris augue. Phasellus imperdiet nisi quis ante commodo dignissim. Aenean vel bibendum ipsum. Proin lobortis lobortis felis nec aliquet. Nunc vestibulum quis enim eu venenatis. Vivamus consectetur justo nec quam euismod, ac pellentesque justo varius. Morbi vel dolor at nisi dictum convallis nec eu ligula. Duis consequat purus ut neque bibendum convallis. Aliquam tempor justo diam, sed dapibus diam laoreet aliquam. Curabitur feugiat neque quis nunc tincidunt porttitor. Integer in nulla metus. Proin pulvinar, massa quis bibendum ullamcorper, arcu arcu convallis mi, ut egestas eros dolor non lacus. Morbi id orci sapien.
+        </div>
 
-License
-希望大家能幫忙改善 -->
-
-
-    </div> <!-- /container -->
-
-  <!-- Insert External Sctips Here -->
-  <script src="../lib/jquery.min.js"></script>  
+      </div>
+      <!-- end col-md-9 --> </div>
+    <!-- end row --> </div>
+  <!-- end container -->
+  <footer class="bs-footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>FOOTER GOES HERE</h1>
+          Lorem ipsum dolor sit amet, consectetur adipiscing eamet velit ullamcorper sollicitudin eu lacinia nisi. Ut sagittis massa non ultricies hendrerit. Fusce non mauris augue. 
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="../lib/bootstrap/bootstrap.min.js"></script>
-  <script src='config.js'></script>
-  </body>
+  <script src="index.js"></script>
+</body>
 </html>

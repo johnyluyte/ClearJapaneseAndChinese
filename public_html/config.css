@@ -1,24 +1,24 @@
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size:200%;
+  padding-top: 40px;
+  /*padding-bottom: 20px;*/
+  font-size:1.6rem;
 }
 .navbar {
-    margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
 }
 td{
-  font-size:1.8rem;
+  font-size:1.6rem;
 }
 .alert{
   margin: 15px 0px 10px 0px;
   color: black;
 }
 h1{
-  color: #fff548;
+  color: #1ab08a;
 }
 
 img.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
