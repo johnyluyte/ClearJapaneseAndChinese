@@ -72,13 +72,15 @@
             </li>
           </ul>
         </div>
-        <!-- end bs-sidebar --> </div>
+        <!-- end bs-sidebar --> 
+      </div>
       <!-- end col-md-3 -->
 
       <div class="col-md-9">
 
-        <div>
-      <h1 id='welcome'>簡介</h1>
+<div class="infoSection">
+      <h1 id='welcome'><b>簡介</b></h1>
+      <hr>
       <p>感謝您安裝 Clear Japanese and Chinese chrome extension，以下簡稱 ClearJ&C。</p>
       <p>ClearJ&C 可以讓使用者一鍵美化瀏覽器的 中文、日文字體。</p>
       <!-- TODO: 這裡放三張 screenshot demo (使用前、使用後、ＭＡＣ)-->
@@ -91,32 +93,11 @@
       <p>Windows 的中文使用者長期飽受破碎字型之苦，而網路上的解決方案大多需要修改特殊檔案，令一般使用者怯步。</p>
       <p>ClearJ&C 除了可以一鍵美化字體外，也提供簡易的選單化設定，讓所有使用者都能輕鬆獲得最好的視覺體驗。</p>
       <p>在正式使用 ClearJ&C 之前，我們要先做基本設定(約5分鐘)。</p>
+</div>      
 
+<div class="infoSection">
+      <h1 id='install_font'><b>安裝核心字體</b></h1>
       <hr>
-      <!-- 
-        有沒有辦法用 @font-face 的方式讓使用者預覽字體? 但是這樣的話，下載字體時間會不會太久(Noto字體檔案大)
-        日文字體 
-        http://kanjialive.com/2013/04/selecting-a-better-japanese-font-for-windows-web-browsers/
-        http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/design/index-en.html#ja
-        http://mplus-fonts.sourceforge.jp/#
-        http://www.macwright.org/2014/07/09/mplus.html
-        如果你的系統是 windows 7 就不用安裝，如果是 windows XP 或 98 95，請升級成 windows 7
-        Linux 怎麼辦!? 下載m+
-        
-        附加：inspired by
-        https://chrome.google.com/webstore/detail/%E9%83%A8%E5%88%86%E5%BC%B7%E5%88%B6%E3%83%A1%E3%82%A4%E3%83%AA%E3%82%AA%E3%81%A1%E3%82%83%E3%82%93/kmjcmncjhdnaealenhoohllicfkdojpb?hl=en
-
-        附加：使用的字體，以及其版權聲明
-
-        去網路上搜尋相關 日文或中文字體瀏覽器 的問題，推廣這個外掛
-        https://superuser.com/questions/400047/smooth-font-rendering-for-japanese-characters
-        重灌狂人等頁面宣傳
-        http://briian.com/22456/album-downloader-for-facebook.html
-        PTT
-
-        paypal donate 測試
-      -->
-      <h1 id='install_font'>安裝核心字體</h1>
       <p>ClearJC 主要支援兩類型字體，分別是微軟的 <a href="https://zh.wikipedia.org/wiki/%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91" target="_blank">微軟雅黑體(Microsoft YaHei)</a>(//TODO 微軟正黑體以及日文字體哩) 以及 Google 和 Adobe 合作推出的 <a href="http://www.google.com/get/noto/" target="_blank"> 思源黑體(Noto Sans T Chinese) </a>，使用者必須安裝以上至少一種字型，才能獲得最佳字體美化功能。</p>
       <li><span style="color:red;">微軟雅黑體</span>：為 Windows Vista, Windows 7 的預設字體，Windows 使用者不必另外安裝。</li>
       <li><span style="color:red;">思源黑體</span>：可至 <a href="http://www.google.com/get/noto/" target="_blank"> 官方網站 </a> 免費下載，或參考電腦玩物的<a href="http://www.playpcesor.com/2014/07/source-han-sans-cht-adobe-google.html" target="_blank"> 教學文</a>。</li>
@@ -128,11 +109,13 @@
         <button type="button" class="close">※</button>
         <p>若您沒安裝某些字體(e.g.思源黑體)，則此外掛內該字體(e.g.思源黑體)的選項都不會產生作用。</p>
       </div>
-      <p>※ 若您希望 ClearJC 支援其他字體(開源、免費為佳)，請至 github 提出建議，謝謝。</p>
- 
-      <hr>
+      <p>※ 若您希望 ClearJ&C 支援其他字體(開源、免費為佳)，請至 github 提出建議，謝謝。</p>
+</div>
 
-      <h1>檢查字體支援狀況</h1>
+<div class="infoSection">
+      <h1><b>檢查字體支援狀況</b></h1>
+      <hr>
+      <p>您的電腦必須支援上表中至少一種字體，ClearJ&C 才能作用。</p>
       <!-- [//TODO這邊放上改變字體大小的按鈕，使用者按了之後可以改變下表的字體大小]<br> -->
       <!-- http://derek1906.site50.net/works/jfont.php<br> -->
       <table class="table table-striped table-hover ">
@@ -199,10 +182,10 @@
       <img src="check-font.png" class="center">
       <div class="alert alert-dismissable alert-warning">
         <button type="button" class="close">※</button>
-        <p>再次提醒，您的電腦必須支援上表中至少一種字體，ClearJC 才能作用。</p>
+        <p>再次提醒，您的電腦必須支援上表中至少一種字體，ClearJ&C 才能作用。</p>
       </div>
+</div>
 
-      <hr>
 <!--       推薦： 沒用 MacType 的話，使用 思源黑體 Noto Sans Regular 或 思源黑體 Noto Sans Medium 或 思源黑體 Noto Sans Bold
       推薦： 有用 MacType 的話，使用 微軟雅黑體 Microsoft YaHei 效果最好(MacType記得打開)
  -->
@@ -211,7 +194,10 @@
       日文要怎樣才能弄得跟 pyonn pyonn 那張一樣漂亮呢?
       更改日文順序?
       還是要加上"某些網址套用某些設定"的功能~? -->
-      <h1>常見問題</h1>
+
+<div class="infoSection">
+      <h1><b>常見問題</b></h1>
+      <hr>
       Q: 我選擇了欲套用的字體，並且按下套用，但是沒有任何效果?<br/>
       A: <br/>
       1. 請確定您的電腦裡有安裝該字體。<br/>
@@ -230,30 +216,156 @@
 
       Q: 如何將網站加入例外
       A: 等 Regex 寫好後，會教你
+</div>
 
+
+<div class="infoSection">
+      <h1 id="one"><b>手動設定 CSS Style:</b></h1>
+      <hr>      
+      <p>在這裡，您可以手動修改您的 CSS Style 設定。例如：</p>
+      <ul>
+      <li><code>*{font-family: "Microsoft YaHei","sans-serif" !important;}</code><br></li>
+      <li><code>body{font-family: "Times New Roman", Times, serif;}</code><br></li>
+      <li><code>.myClass{font-family: 'Tangerine', serif; font-size: 48px; text-shadow: 4px 4px 4px #aaa;}</code><br></li>
+      </ul>
+      更多資源請參考：
+      <a href="https://developers.google.com/fonts/docs/getting_started" target="_blank">Google fonts</a>、
+      <a href="http://www.w3schools.com/cssref/css3_pr_text-shadow.asp" target="_blank">w3school</a>、
+      <a href="http://www.cssfontstack.com/" target="_blank">CSS Font Stack</a> 或其他介紹進階 CSS 的網站及書籍。<br/>
+
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title">若您看不懂上面的說明，請不要修改下列代碼。</h3>
+        </div>
+        <div class="panel-body">
+              <!-- 從 storage cache 讀取目前的 CSS 設定並貼在這裡 -->
+              <textarea rows="2" cols="60">*{font-family:"Microsoft YaHei","sans-serif" !important;}</textarea>
+        </div>
+        <div class="panel-footer">
+        <a href="#" class="btn btn-primary">回復預設值</a>
+            <a href="#" class="btn btn-danger">我確實了解我修改了什麼，並希望儲存我的設定</a>    
+        </div>
+      </div>
+</div>
+
+
+
+<div class="infoSection">
+      <h1 id="one"><b>設定例外網站</b></h1>
+      <hr>      
+      <p>ClearJ&C 提供<span style="color:red;">自動套用</span>功能，當您在 [其他設定] 中點選 [自動套用在所有頁面] 後，ClearJ&C 會自動將您之後新開的網頁都套用您設定的字型 (已經開啟的網頁則在重新整理後套用)。</p>
+      <!-- 這裡插設定的圖片 -->
+      <p>但是，不一定所有網站都支援您所設定的字型，有些網站使用特殊字體的圖示，若使用 ClearJ&C 強制覆蓋掉該字體，那麼那些圖示也將無法顯示。</p>
+      <p>例如 <a href="https://github.com/" target="_blank">Github</a> 就使用了這類特殊的圖示。(參見下圖)</p>
+      <img src="imgs/github_tofu.jpg" alt="gihub_tofu">
+      <!-- 這裡插入 github 方塊字的圖片 -->
+      <p>如上圖所示，若使用 ClearJ&C 強制覆蓋掉該字體，某些圖示將無法正常顯示，而改以方塊(或是俗稱的<a href="https://zh.wikipedia.org/wiki/Noto" target="_blank">豆腐字</a>)顯示。</p>
+      <p>因為上述原因，我們不建議您在這類網站套用 ClearJ&C，若您常瀏覽這類網站，我們建議：</p>
+      <ol>
+        <li>關閉<span style="color:red;">自動套用</span>功能。手動套用欲套用的頁面。</li>
+        <li>不關閉<span style="color:red;">自動套用</span>，使用<a href="http://www.regular-expressions.info/examples.html" target="_blank">正規語言(REGEX)</a>在下方文字方塊內指定例外網域，ClearJ&C 會自動略過這些網域。</li>
+      </ol>
+      <p>ClearJ&C 的 Regex 範例 (開頭與結尾 <span style="color:red;"><b>不需要加上 / </b></span>)：</p>
+      <ul>
+      <li><code>http[s]?:\/\/*github.com\/*</code><br></li>
+      <li><code>http[s]?:\/\/*github.com\/*</code><br></li>
+      <li><code>http[s]?:\/\/*github.com\/*</code><br></li>
+      </ul>
+      <div class="alert alert-dismissable alert-warning">
+        <button type="button" class="close">※</button>
+        <p>注意，ClearJ&C 不會對您輸入的 Regex 做任何檢查，請再三確認您的 Regex 沒有任何錯誤。</p>
+      </div>      
+
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title">若您看不懂上面的說明，請不要修改下列代碼。</h3>
+        </div>
+        <div class="panel-body">
+              <!-- 從 storage cache 讀取目前的 CSS 設定並貼在這裡 -->
+              <textarea rows="4" cols="60">http[s]?:\/\/*github.com\/*
+Coursera
+用\n判斷
+</textarea>
+        </div>
+        <div class="panel-footer">
+        <a href="#" class="btn btn-primary">回復預設值</a>
+            <a href="#" class="btn btn-danger">我確實了解我修改了什麼，並希望儲存我的設定</a>    
+        </div>
+      </div>
+</div>
+
+
+
+<div class="infoSection">
+      <h1 id="one"><b>TODO:</b></h1>
       <hr>
-      <h1 id="one">TODO:</h1>
       要記得打開此 html 編輯，有很多註解<br>
       推薦之中文字型<br>
       推薦之日文字型<br>
-<!--       在這些說明頁面中，要儲存預設值進入 storage，否則安裝完外掛時，這三個值會是空白的
+      http://www.webdesigndev.com/web-development/16-gorgeous-web-safe-fonts-to-use-with-css<br/>
+</div>
+
+
+      <!-- 
+新增 更新紀錄 Version history 頁面，每次更新就顯示在 chrome.  
+Clear J&C has been update to the latest version!
+
+使用特殊字體 font face 套用在此葉面，這樣內容比較好看
+
+有沒有辦法加入快捷鍵，這樣即使不打開自動套用，也可以快速手動套用
+
+
+        有沒有辦法用 @font-face 的方式讓使用者預覽字體? 但是這樣的話，下載字體時間會不會太久(Noto字體檔案大)
+        日文字體 
+        http://kanjialive.com/2013/04/selecting-a-better-japanese-font-for-windows-web-browsers/
+        http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/design/index-en.html#ja
+        http://mplus-fonts.sourceforge.jp/#
+        http://www.macwright.org/2014/07/09/mplus.html
+        如果你的系統是 windows 7 就不用安裝，如果是 windows XP 或 98 95，請升級成 windows 7
+        Linux 怎麼辦!? 下載m+
+        
+        附加：inspired by
+        https://chrome.google.com/webstore/detail/%E9%83%A8%E5%88%86%E5%BC%B7%E5%88%B6%E3%83%A1%E3%82%A4%E3%83%AA%E3%82%AA%E3%81%A1%E3%82%83%E3%82%93/kmjcmncjhdnaealenhoohllicfkdojpb?hl=en
+
+        附加：使用的字體，以及其版權聲明
+
+        去網路上搜尋相關 日文或中文字體瀏覽器 的問題，推廣這個外掛
+        https://superuser.com/questions/400047/smooth-font-rendering-for-japanese-characters
+        重灌狂人等頁面宣傳
+        http://briian.com/22456/album-downloader-for-facebook.html
+        PTT
+
+        paypal donate 測試
+      -->
+<!--       
+
+按此關閉效果，下面也要顯示
+已將下列設為預設：
+*{font-family:5646546554465465,"sans-serif" !important;}
+關閉效果時，不應該只套用 "sans-serif"，而應該套用整套的 websafe 字體
+
+在這些說明頁面中，要儲存預設值進入 storage，否則安裝完外掛時，這三個值會是空白的
       三個 
       1. css_customized
       2. auto_apply
       3. current_font_name
-      要寫在說明裡面 -->
+      要寫在說明裡面 
 
-      <hr>
+已知 bug: ClearJC 本身的說明頁面 public_html/index.html 預設不會套用 ClearJC 的渲染效果。
+    -->
 
 
+<div class="infoSection">
       <!-- <h1>demo 圖片影片</h1> -->
       <h1>使用資源</h1>
+      <hr>
       <li>bootstrap</li>
       <li>bootwatch</li>
       <li>http://glyphicons.com/license/</li>
 <!-- You must always add link to www.glyphicons.com include the CC-BY license -->
 
-        </div>
+</div>
+
         <div>
           <h1 id="two">TWO</h1>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac felis sed eros bibendum tincidunt. In vel lectus sit amet velit ullamcorper sollicitudin eu lacinia nisi. Ut sagittis massa non ultricies hendrerit. Fusce non mauris augue. Phasellus imperdiet nisi quis ante commodo dignissim. Aenean vel bibendum ipsum. Proin lobortis lobortis felis nec aliquet. Nunc vestibulum quis enim eu venenatis. Vivamus consectetur justo nec quam euismod, ac pellentesque justo varius. Morbi vel dolor at nisi dictum convallis nec eu ligula. Duis consequat purus ut neque bibendum convallis. Aliquam tempor justo diam, sed dapibus diam laoreet aliquam. Curabitur feugiat neque quis nunc tincidunt porttitor. Integer in nulla metus. Proin pulvinar, massa quis bibendum ullamcorper, arcu arcu convallis mi, ut egestas eros dolor non lacus. Morbi id orci sapien.
@@ -263,16 +375,18 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac felis sed eros bibendum tincidunt. In vel lectus sit amet velit ullamcorper sollicitudin eu lacinia nisi. Ut sagittis massa non ultricies hendrerit. Fusce non mauris augue. Phasellus imperdiet nisi quis ante commodo dignissim. Aenean vel bibendum ipsum. Proin lobortis lobortis felis nec aliquet. Nunc vestibulum quis enim eu venenatis. Vivamus consectetur justo nec quam euismod, ac pellentesque justo varius. Morbi vel dolor at nisi dictum convallis nec eu ligula. Duis consequat purus ut neque bibendum convallis. Aliquam tempor justo diam, sed dapibus diam laoreet aliquam. Curabitur feugiat neque quis nunc tincidunt porttitor. Integer in nulla metus. Proin pulvinar, massa quis bibendum ullamcorper, arcu arcu convallis mi, ut egestas eros dolor non lacus. Morbi id orci sapien.
         </div>
 
-      </div>
-      <!-- end col-md-9 --> </div>
-    <!-- end row --> </div>
-  <!-- end container -->
+
+      </div><!-- end col-md-9 -->
+    </div><!-- end row -->
+  </div><!-- end container -->
+
   <footer class="bs-footer" role="contentinfo">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <h1>FOOTER GOES HERE</h1>
           Lorem ipsum dolor sit amet, consectetur adipiscing eamet velit ullamcorper sollicitudin eu lacinia nisi. Ut sagittis massa non ultricies hendrerit. Fusce non mauris augue. 
+        </div>
       </div>
     </div>
   </footer>

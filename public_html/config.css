@@ -3,9 +3,6 @@ body {
   /*padding-bottom: 20px;*/
   font-size:1.6rem;
 }
-.navbar {
-  /*margin-bottom: 20px;*/
-}
 td{
   font-size:1.6rem;
 }
@@ -16,9 +13,22 @@ td{
 h1{
   color: #1ab08a;
 }
+.infoSection{
+  padding-bottom: 15px;
+}
+
+.panel-danger{
+  margin-top: 20px;
+}
 
 img.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+hr{
+  /*https://stackoverflow.com/questions/6382023/changing-the-color-of-a-hr-element*/
+  background-color: #aaaaaa; height: 1px; border: 0; 
+  margin: 0px 0px 3px;
 }
