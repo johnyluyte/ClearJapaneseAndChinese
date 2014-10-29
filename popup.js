@@ -170,7 +170,7 @@ function parseFontJSON(data){
   */
   var select = '<select style="width:210px" id="select_font" tabindex="1">';
   for(var i in fontJSON){
-    select += '<option class="foo" value="' + fontJSON[i].value + '">' + fontJSON[i].label + '</option>';
+    select += '<option value="' + fontJSON[i].value + '">' + fontJSON[i].label + '</option>';
   }
   select += '</select>';
   $("#div_select").html(select);

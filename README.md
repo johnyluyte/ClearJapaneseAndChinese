@@ -20,6 +20,12 @@ To be updated.
 
 ## Todo Lists
 
+- popup.html should use i18n, _locales/en/messages.json.
+- public_html should not, because the users can choose languages simply by clicking the nav.
+- i18n.
+- publish to dashboard and test.
+- 把自動套用抽出其他設定。把其他設定更名，功用一樣是防止按到還原所有設定至初始值
+- change the CSS to mm3 style
 - A lot.
 
 
