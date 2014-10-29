@@ -1,0 +1,22 @@
+{
+  "error": {
+    "message": "Error: $details$",
+    "description": "Generic error template. Expects error parameter to be passed in.",
+    "placeholders": {
+      "details": {
+        "content": "$1",
+        "example": "Failed to fetch RSS feed."
+      }
+    }
+  },  
+
+  "extName": {
+    "description": "Extension name.",
+    "message": "Clear Japanese and Chinese"
+  },
+  "extDescription": {
+    "description": "Extension description.",
+    "message": "This extension allows you to easily switch to fonts which are much clearer to see Japanese and Chinese articles than default font in Chrome. This extension is for users who want to see MAC-like clear fonts in Windows and Linux."
+  }
+  
+}

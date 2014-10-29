@@ -153,6 +153,9 @@ $(function(){
     '}',
     allFrames: true
   }
+
+  /* Detect browser's current locale (en, ja, zh_CN, zh_TW) */
+  showMessage("@@ui_local = " + chrome.i18n.getMessage("@@ui_locale"));
 });
 
 function parseFontJSON(data){
