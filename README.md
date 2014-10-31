@@ -20,6 +20,7 @@ To be updated.
 
 ## Todo Lists
 
+- Edit the icon to fit 128x128 (96x96) as [reference](https://developer.chrome.com/webstore/images?hl=zh-TW)
 - Popup.html should use i18n, _locales/en/messages.json.
 - Public_html should not, because the users can choose languages simply by clicking the nav.
 - Do we really need the "還原所有設定" option?
