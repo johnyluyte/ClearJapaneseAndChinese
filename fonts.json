@@ -66,6 +66,32 @@
       "value": "PMingLiU",
       "fontFamily": "PMingLiU"
     },
+
+    {
+      "name": "儷黑",
+      "label": "儷黑 LiHei",
+      "value": "LiHei",
+      "fontFamily": "LiHei Pro"
+    },
+    {
+      "name": "儷宋",
+      "label": "儷宋 LiSong",
+      "value": "LiSong",
+      "fontFamily": "LiSong Pro"
+    },
+    {
+      "name": "雅痞",
+      "label": "雅痞 Yuppy",
+      "value": "Yuppy",
+      "fontFamily": "Yuppy TC"
+    },
+    {
+      "name": "娃娃體",
+      "label": "娃娃體 Wawati",
+      "value": "Wawati",
+      "fontFamily": "Wawati TC"
+    },
+
     {
       "name": "sans-serif",
       "label": "sans-serif",

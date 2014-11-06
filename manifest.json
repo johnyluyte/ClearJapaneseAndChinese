@@ -20,19 +20,11 @@
     "default_popup": "popup.html"
   },
 
-
-
-
   "permissions": [
     "tabs", "http://*/*", "https://*/*", "activeTab", "storage"
   ],
 
   "content_scripts": [ 
-    {
-      "js": [ "lib/jquery.min.js" ],
-      "matches": [ "http://*/*", "https://*/*" ],
-      "run_at": "document_start"
-    }, 
     {
       "js": [ "cs.js" ],
       "matches": [ "http://*/*", "https://*/*" ],
