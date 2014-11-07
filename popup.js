@@ -1,3 +1,113 @@
+$(function(){
+  init();
+});
+
+
+function init(){
+  initButtons();
+  initDOM();
+
+  /* Parse external JSON file */
+  $.getJSON("fonts.json", function(data) {
+    parseFontJSON(data);
+  });
+
+  /* Initialize variables */
+  css_sans_serif = {
+    code: 
+    '*{font-family:"sans-serif" !important;'+
+    'text-shadow:default !important;'+
+    'font-weight:default !important;'+
+    '}',
+    allFrames: true
+  }
+
+  /* Detect browser's current locale (en, ja, zh_CN, zh_TW) */
+  showMessage("@@ui_local = " + chrome.i18n.getMessage("@@ui_locale"));
+
+}
+
+
+function initButtons(){
+  $("#btn_deactivate").click(function(event){
+    applyCSS(css_sans_serif);
+  });
+
+  $("#btn_set_selected_as_default").click(function(event){
+    css_customized = getSelected();
+    applyCSS(css_customized);
+
+    chrome.storage.sync.set({'css_code': css_customized.code}, function() {
+      showMessage('已將下列設為預設：<br/>'+ css_customized.code);
+      console.debug("[set css_customized] "+css_customized.code);
+    });
+
+    $("#span_title_current_font").text(current_applied_font_name);
+      chrome.storage.sync.set({'current_font_name': current_applied_font_name}, function() {
+    });
+  });
+
+ 
+  $("#div_other_setting_auto_apply").click(function(event){
+    var value = $("#div_other_setting_auto_apply span").attr('value');
+    console.debug(value);
+    var tmp;
+    if(value=="true"){
+      tmp = '<span class="glyphicon glyphicon-unchecked" value="false"></span> 自動套用在所有頁面<br>';
+      chrome.storage.sync.set({'auto_apply': 'false'},function(){});
+      showMessage("自動套用已關閉。");
+    }else{
+      tmp = '<span class="glyphicon glyphicon-check" value="true"></span> 自動套用在所有頁面<br>';
+      chrome.storage.sync.set({'auto_apply': 'true'},function(){});
+      showMessage("自動套用已開啟，之後開啟的所有頁面都會自動套用字體效果。");
+    }
+    $("#div_other_setting_auto_apply").html(tmp);
+  });  
+
+  $("#div_other_setting_revert_all").click(function(event){
+    /* We use the first font in JSON file as the default "Current Font" */
+    $("#span_title_current_font").text(fontJSON[0].name);
+    css_customized = {
+      code: 
+      '*{font-family:"' + fontJSON[0].fontFamily + '", sans-serif !important;'+
+      '}',
+      allFrames: true
+    };
+    chrome.storage.sync.set({'css_customized': css_customized});
+    chrome.storage.sync.set({'auto_apply': 'true'},function(){});
+    // warning message: 
+    showMessage("已將所有設定還原至初始值。");
+  });
+}
+
+
+function initDOM(){
+  chrome.storage.sync.get('auto_apply', function(data){
+    var text_auto_apply;
+    if(data.auto_apply=="true"){
+      text_auto_apply = '<span class="glyphicon glyphicon-check" value="true"></span> 自動套用在所有頁面<br>';
+    }else{
+      text_auto_apply = '<span class="glyphicon glyphicon-unchecked" value="false"></span> 自動套用在所有頁面<br>';
+    }
+    $("#div_other_setting_auto_apply").html(text_auto_apply);
+  });
+
+  // 當 auto apply 啟動時才顯示？
+  chrome.storage.sync.get('current_font_name', function(data) {
+    $("#span_title_current_font").text(data.current_font_name);
+  });
+
+  /* Toogle panel slide */
+  $("#div_advanced_setting_heading").click(function(event){
+    $("#div_advanced_setting_body").slideToggle();
+  });
+  $("#div_other_setting_heading").click(function(event){
+    $("#div_other_setting_body").slideToggle();
+  });
+}
+
+
+
 // TODO: add informative comment, function refactory, code refactory
 
 function getFontFamily(value){
@@ -53,110 +163,6 @@ function showMessage(msg){
   $("#show_message").html(message);
 }
 
-$(function(){
-  /* One click activate */
-  // $("#btn_activate").click(function(event){
-  //     load CSS from Storage.
-  //     apply CSS
-  // });
-  $("#btn_deactivate").click(function(event){
-    applyCSS(css_sans_serif);
-  });
-
-  /* Basic settings */
-  $("#btn_apply_selected").click(function(event){
-    applyCSS(getSelected());
-  });
-  $("#btn_set_selected_as_default").click(function(event){
-    css_customized = getSelected();
-    applyCSS(css_customized);
-
-    chrome.storage.sync.set({'css_code': css_customized.code}, function() {
-      showMessage('已將下列設為預設：<br/>'+ css_customized.code);
-      console.debug("[set css_customized] "+css_customized.code);
-    });
-
-    $("#span_title_current_font").text(current_applied_font_name);
-      chrome.storage.sync.set({'current_font_name': current_applied_font_name}, function() {
-    });
-  });
-
-  /* Advanced settings */
-
-  /* Other settings */
-  chrome.storage.sync.get('auto_apply', function(data){
-    var text_auto_apply;
-    if(data.auto_apply=="true"){
-      text_auto_apply = '<span class="glyphicon glyphicon-check" value="true"></span> 自動套用在所有頁面<br>';
-    }else{
-      text_auto_apply = '<span class="glyphicon glyphicon-unchecked" value="false"></span> 自動套用在所有頁面<br>';
-    }
-    $("#div_other_setting_auto_apply").html(text_auto_apply);
-  });
-  $("#div_other_setting_auto_apply").click(function(event){
-    var value = $("#div_other_setting_auto_apply span").attr('value');
-    console.debug(value);
-    var tmp;
-    if(value=="true"){
-      tmp = '<span class="glyphicon glyphicon-unchecked" value="false"></span> 自動套用在所有頁面<br>';
-      chrome.storage.sync.set({'auto_apply': 'false'},function(){});
-      showMessage("自動套用已關閉。");
-    }else{
-      tmp = '<span class="glyphicon glyphicon-check" value="true"></span> 自動套用在所有頁面<br>';
-      chrome.storage.sync.set({'auto_apply': 'true'},function(){});
-      showMessage("自動套用已開啟，之後開啟的所有頁面都會自動套用字體效果。");
-    }
-    $("#div_other_setting_auto_apply").html(tmp);
-  });  
-
-  $("#div_other_setting_revert_all").click(function(event){
-    /* We use the first font in JSON file as the default "Current Font" */
-    $("#span_title_current_font").text(fontJSON[0].name);
-    css_customized = {
-      code: 
-      '*{font-family:"' + fontJSON[0].fontFamily + '", sans-serif !important;'+
-      '}',
-      allFrames: true
-    };
-    chrome.storage.sync.set({'css_customized': css_customized});
-    chrome.storage.sync.set({'auto_apply': 'true'},function(){});
-    // warning message: 
-    showMessage("已將所有設定還原至初始值。");
-  });
-
-  chrome.storage.sync.get('current_font_name', function(data) {
-    $("#span_title_current_font").text(data.current_font_name);
-  });
-
-  /* Toogle panel slide */
-  $("#div_advanced_setting_heading").click(function(event){
-    $("#div_advanced_setting_body").slideToggle();
-  });
-  $("#div_other_setting_heading").click(function(event){
-    $("#div_other_setting_body").slideToggle();
-  });
-
-  /* Enable bootstrap tool tips */
-  $('.bs-component [data-toggle="tooltip"]').tooltip();
-
-  /* Parse external JSON file */
-  $.getJSON("fonts.json", function(data) {
-    parseFontJSON(data);
-  });
-
-  /* Initialize variables */
-  css_sans_serif = {
-    code: 
-    '*{font-family:"sans-serif" !important;'+
-    'text-shadow:default !important;'+
-    'font-weight:default !important;'+
-    '}',
-    allFrames: true
-  }
-
-  /* Detect browser's current locale (en, ja, zh_CN, zh_TW) */
-  showMessage("@@ui_local = " + chrome.i18n.getMessage("@@ui_locale"));
-});
 
 function parseFontJSON(data){
   fontJSON = data.fonts;

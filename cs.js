@@ -1,6 +1,31 @@
 // TODO: add informative comment, function refactory, code refactory
 global_style_id = "clearJC_Style_Id";
 
+
+// This function will be excuted everytime the user visit a new page (or create a new tab) as long as ClearJC is activated in Chrome.
+/* 
+  由於這裏會用到 jQuery 的函數，因此
+  1. 要就將 jquery.js 加入 manifest.json 的 content_scripts 中 
+  2. 要就 在 cs.js 裡不要用到 jquery 的東西
+
+  */
+$(function(){
+  /* Check if the user want ClearJC to automatically inject CSS on every page. */
+  chrome.storage.sync.get('auto_apply', function(data){
+    if(data.auto_apply=="true" && isValidURL(document.URL)){
+      /* Load the customized css from storage */
+      chrome.storage.sync.get('css_code', function(data){
+        autoInjectCSS(data.css_code);
+      });  
+    }
+  });
+});
+
+
+function checkIfAutoInjectIsOn(){
+
+}
+
 /* We will not inject CSS to URLs that are excluded by the User*/
 // TODO: 
 // coursera, http://dictionary.goo.ne.jp/
@@ -13,17 +38,6 @@ function isValidURL(url){
   return true;
 }
 
-$(function(){
-  /* Check if the user want ClearJC to automatically inject CSS to every page. */
-  chrome.storage.sync.get('auto_apply', function(data){
-    if(data.auto_apply=="true" && isValidURL(document.URL)){
-      /* Load the customized css from storage */
-      chrome.storage.sync.get('css_code', function(data){
-        autoInjectCSS(data.css_code);
-      });  
-    }
-  });
-});
 
 /* 
   We create a style node:

@@ -20,6 +20,16 @@ To be updated.
 
 ## Todo Lists
 
+- 列出總共存哪些東西 css_customized, 
+auto_apply
+css_code
+- 列出 global variable: fontJSON
+- 寫 fonts.json 的各個 attribute 註解
+- 全部加上註解
+
+- 提醒使用者：啟動後就是完全取代頁面上所有字體。要關閉的話需要取消勾選自動套用並重新整理。能不能用 code 自動重新整理頁面？
+- 最上面的 “目前字體” 是不是有錯？若沒設為預設字體時要改行為？
+- [網頁中英文字型(font-family)跨平台設定最佳化](http://www.wfublog.com/2014/02/font-family-chinese-cross-platform.html)
 - Code refactory, fonts.json refactory
 - MAC 也可（字體簿），先 ignore， 但demo影片要有
 - MAC font 跟 windows font 跟第三方 font 分開
