@@ -27,6 +27,7 @@ To be updated.
 
 ## Todo Lists
 
+- The user should be able customize his/her own "font setting" in the setting page, and choose his/her "font setting" from <select></select> in popup.html.
 - 列出總共存哪些東西 css_customized, 
 auto_apply
 css_code

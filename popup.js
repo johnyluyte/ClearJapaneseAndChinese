@@ -48,11 +48,11 @@ function init(){
 
 
 function initButtons(){
-  $("#btn_deactivate").click(function(event){
+  $("#btn_cancel").click(function(event){
     applyCSS(css_sans_serif);
   });
 
-  $("#btn_set_selected_as_default").click(function(event){
+  $("#btn_apply").click(function(event){
     css_customized = getSelected();
     applyCSS(css_customized);
 
@@ -66,8 +66,8 @@ function initButtons(){
   });
 
  
-  $("#div_other_setting_auto_apply").click(function(event){
-    var value = $("#div_other_setting_auto_apply span").attr('value');
+  $("#btn_auto_apply").click(function(event){
+    var value = $("#btn_auto_apply span").attr('value');
     console.debug(value);
     var tmp;
     if(value=="true"){
@@ -79,7 +79,7 @@ function initButtons(){
       chrome.storage.sync.set({'auto_apply': 'true'});
       showMessage("自動套用已開啟，之後開啟的所有頁面都會自動套用字體效果。");
     }
-    $("#div_other_setting_auto_apply").html(tmp);
+    $("#btn_auto_apply").html(tmp);
   });  
 }
 
@@ -92,7 +92,7 @@ function initDOM(){
     }else{
       text_auto_apply = '<span class="glyphicon glyphicon-unchecked" value="false"></span> 自動套用在所有頁面<br>';
     }
-    $("#div_other_setting_auto_apply").html(text_auto_apply);
+    $("#btn_auto_apply").html(text_auto_apply);
   });
 
   // 當 auto apply 啟動時才顯示？
