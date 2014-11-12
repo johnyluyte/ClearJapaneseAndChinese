@@ -13,6 +13,13 @@ To be updated.
 To be updated.
 
 
+## Usage
+
+- The user can manually choose a specific "font setting" and apply it to current page.
+- The user can set ClearJC to automatically apply a specfic "font setting" to every new page.
+  - Sites that are in the "excluded lists" will not be automatically applied.
+
+
 ## Settings
 
 To be updated.
@@ -23,7 +30,7 @@ To be updated.
 - 列出總共存哪些東西 css_customized, 
 auto_apply
 css_code
-- 列出 global variable: fontJSON
+- 列出 global variable: fontDatas
 - 寫 fonts.json 的各個 attribute 註解
 - 全部加上註解
 
