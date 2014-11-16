@@ -27,6 +27,7 @@ To be updated.
 
 ## Todo Lists
 
+- 滑鼠移動到 popup.html 上面時，要出現正確的游標圖案(手勢、指標等)
 - The user should be able customize his/her own "font setting" in the setting page, and choose his/her "font setting" from <select></select> in popup.html.
 - 列出總共存哪些東西 css_customized, 
 auto_apply

@@ -9,12 +9,11 @@
   <body>
     <!-- 用 logo 來撐住寬度!! -->
     <img src="icons/logo.png">
-      <div class="list-group">
+      <div class="list-group" id="div_group1">
         <h5 class="list-group-item active listCeter">
-          目前字體：
-          <strong><span id="span_title_current_font">微軟雅黑體</span></strong>
+          <strong>基本設定</strong>
+          <span id="span_title_current_font">微軟雅黑體</span>
         </h5>
-        <a class="list-group-item" id="btn_auto_apply"></a>
 
         <span class="list-group-item">
           <p>選擇欲套用的字體：</p>
@@ -22,28 +21,52 @@
           </div>
         </span>
 
+        <span class="list-group-item">
+          <p>
+            Weight:
+            <input id="input_weight" type="number" name="" min="0" max="2000" step="100" value="300">
+          </p>
+          <p>
+            Shadow Color:
+            <input id="input_shadow_color" type="color" name="" value="#333333">
+          </p>
+          <p>
+            offset:
+            <input id="input_shadow_offsetX" type="number" name="" min="0" max="10" step="0.1" value="0">
+            <input id="input_shadow_offsetY" type="number" name="" min="0" max="10" step="0.1" value="0">
+            <input id="input_shadow_offsetZ" type="number" name="" min="0" max="10" step="0.1" value="0">
+          </p>
+        </span>        
+
         <a class="list-group-item" id="btn_apply"><span class="glyphicon glyphicon-ok"></span> 套用</a>
         <a class="list-group-item" id="btn_cancel"><span class="glyphicon glyphicon-remove"></span> 按此關閉效果</a>
+        <a class="list-group-item" id="btn_auto_apply"></a>
       </div>
-<!--           <div id="btn_auto_apply">
-          </div>
- -->
-      <div class="panel panel-primary">
-        <div class="panel-heading" id="div_other_setting_heading">
-          <h5 class="panel-title">其他設定</h5>
-        </div>
-        <div class="panel-body" style="display: none" id="div_other_setting_body">
 
-          <!-- <div id="">
-            <span class="glyphicon glyphicon-unchecked"></span> 顯示 Windows 預設的字體。<br>
-          </div>
-          <div id="">
-            <span class="glyphicon glyphicon-unchecked"></span> 顯示 OS X 預設的字體。<br>
-          </div>
-          <div id="">
-            <span class="glyphicon glyphicon-unchecked"></span> 顯示第三方字體。<br>
-          </div> -->
+      <div class="list-group" id="div_group2">
+        <h5 class="list-group-item active listCeter">
+          <strong>我的設定檔</strong>
+        </h5>
+        <a class="list-group-item" id="btn_saveCustomized"><span class="glyphicon glyphicon glyphicon-floppy-save"></span> 儲存至我的設定</a>
+        <!-- <a class="list-group-item" id=""></a> -->
+        <span class="list-group-item">
+          <span class="glyphicon glyphicon-star"></span> 從我的設定讀取
+            <select style="width:80px" class="select_form" id="">
+              <option value="">設定一</option>
+              <option value="">設定二</option>
+              <option value="">設定三</option>
+            </select>
+        </span>
+
+        <!-- <div id="">
+          <span class="glyphicon glyphicon-unchecked"></span> 顯示 Windows 預設的字體。<br>
         </div>
+        <div id="">
+          <span class="glyphicon glyphicon-unchecked"></span> 顯示 OS X 預設的字體。<br>
+        </div>
+        <div id="">
+          <span class="glyphicon glyphicon-unchecked"></span> 顯示第三方字體。<br>
+        </div> -->
       </div>
 
       <div id="show_message">

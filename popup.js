@@ -77,7 +77,7 @@ function initButtons(){
     }else{
       tmp = '<span class="glyphicon glyphicon-check" value="true"></span> 自動套用在所有頁面<br>';
       chrome.storage.sync.set({'auto_apply': 'true'});
-      showMessage("自動套用已開啟，之後開啟的所有頁面都會自動套用字體效果。");
+      showMessage("自動套用已開啟，之後開啟的頁面都會自動套用字體效果。");
     }
     $("#btn_auto_apply").html(tmp);
   });  
@@ -100,13 +100,6 @@ function initDOM(){
     $("#span_title_current_font").text(data.current_font_name);
   });
 
-  /* Toogle panel slide */
-  $("#div_advanced_setting_heading").click(function(event){
-    $("#div_advanced_setting_body").slideToggle();
-  });
-  $("#div_other_setting_heading").click(function(event){
-    $("#div_other_setting_body").slideToggle();
-  });
 }
 
 
@@ -166,8 +159,9 @@ function applyCSS(parameter){
 
 
 function showMessage(msg){
-  var message = '<div class="alert alert-dismissable alert-warning">'+
-    '<button type="button" class="close" data-dismiss="alert">×</button>'+ msg + '</div>';
+  var message = '<div class="alert alert-dismissable alert-warning">';
+  // message += '<button type="button" class="close" data-dismiss="alert">×</button>';
+  message += msg + '</div>';
   $("#show_message").html(message);
 }
 
@@ -185,7 +179,7 @@ function parsefontDatas(data){
       ...
     </select>
   */
-  var select = '<select style="width:210px" id="select_font" tabindex="1">';
+  var select = '<select style="width:210px" class="select_form" id="select_font" tabindex="1">';
   for(var i in fontDatas){
     select += '<option value="' + fontDatas[i].value + '">' + fontDatas[i].label + '</option>';
   }

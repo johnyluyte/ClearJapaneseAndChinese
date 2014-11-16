@@ -4,75 +4,98 @@ body{
   font-size: 150%;
 }
 
-#span_title_current_font{
-  color:black;
-}
-
-.panel-title,.listCeter{
-  text-align: center;
-}
-
-#select_font{
-  color:black;
-  margin: 0px 0px 10px 0px;
-}
-
 .list-group{
-  padding: 0px 0px 10px 0px;
+  padding: 0px;
   margin: 0px;
 }
 
-.panel{
-  padding:0px;
-  margin:0px 0px 10px 0px;
-}
-
-.panel-heading,.panel-body{
-  padding: 5px 10px;
-  margin:3px;
-}
-
-.panel-primary{
-  background: #0b2a49;
-}
-
-.btn{
-  padding:5px 20px;
-  margin:10px 0px;
-}
-
-.alert-success,.alert-info{
-  padding: 3px 30px 3px 10px;
+.list-group-item{
+  padding: 8px 10px;
   margin: 0px;
-  font-size: 80%;
-  /*color:yellow;*/
 }
+
+
+/* "選擇欲套用字體" 跟 "讀取我的設定黨" 兩個 <select> 都使用這個規則*/
+
+.select_form{
+  color:black;
+  margin: 0px 0px 10px 0px;  
+}
+
+
+/* Input weight, shadow color, shadow offsets*/
+
+#input_weight{
+  margin: 0px 5px;
+  width: 60px;
+}
+#input_shadow_color{
+  margin: 0px 5px;
+  width: 40px;
+}
+#input_shadow_offsetX, #input_shadow_offsetY, #input_shadow_offsetZ{
+  margin: 0px 5px;
+  width: 40px;
+}
+
+
+/* Items for list-group1 and list-group2 */
+
+#div_group1 .list-group-item{
+  color: #0ce3ac;
+}
+
+#div_group2 .list-group-item{
+  color: #84C1EA;
+}
+
+
+/* Headers for list-group1 and list-group2 */
+
+#div_group1 .list-group-item.active:hover, .list-group-item.active:focus{
+  background: #111111;
+  border-color: #555555;
+}
+
+#div_group2 .list-group-item.active:hover, .list-group-item.active:focus{
+  background: #111111;
+  border-color: #555555;
+}
+
+.list-group .listCeter{
+  text-align: center;
+  padding: 5px 0px; 
+  background: #111111;
+  border-color: #111111;
+  color: black;
+}
+
+#div_group1 h5.list-group-item{
+  /*font-size: 20px;*/
+}
+
+
+/* Buttons */
+
+.list-group #btn_auto_apply{
+ color:yellow; 
+}
+
+.list-group #btn_apply,#btn_cancel,#btn_auto_apply,#btn_saveCustomized{
+  cursor: pointer;
+}
+
+
+/* Others */
 
 .alert-warning{
   padding: 3px 30px 3px 10px;
   margin: 0px;
-  font-size: 80%;
-  color:#000000;
+  border-width: 0px;
+  font-size: 100%;
+  background-color: #111111;
+  color:pink;
 }
-
-#btn_apply, #btn_cancel{
-  cursor: pointer;
-}
-
-#btn_auto_apply{
- cursor: pointer;
- color:yellow; 
-}
-
-#div_other_setting_heading{
-  cursor: pointer;
-}
-
-#div_other_setting_body{
-  cursor: pointer;
-  color:yellow;
-}
-
 
 #footer{
   margin:3px 5px;
