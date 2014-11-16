@@ -77,7 +77,7 @@ body{
 
 /* Buttons */
 
-.list-group #btn_auto_apply{
+.list-group #btn_apply,.list-group #btn_auto_apply{
  color:yellow; 
 }
 

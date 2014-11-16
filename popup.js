@@ -3,10 +3,7 @@
 
   chrome.storage.sync.set({'auto_apply': 'false'});
   chrome.storage.sync.set({'css_code': css_customized.code});
-  chrome.storage.sync.set({'current_font_name': current_applied_font_name});
   chrome.storage.sync.set({'css_customized': css_customized});
-
-  does 'current_font_name' also contained in 'css_customized' so that we can delete it?
 
   TODO: should add on failure callback function for storage.sync.set() and get().
   see https://developer.chrome.com/extensions/storage
@@ -60,9 +57,6 @@ function initButtons(){
       showMessage('已將下列設為預設：<br/>'+ css_customized.code);
       console.debug("[set css_customized] "+css_customized.code);
     });
-
-    $("#span_title_current_font").text(current_applied_font_name);
-    chrome.storage.sync.set({'current_font_name': current_applied_font_name});
   });
 
  
@@ -94,12 +88,6 @@ function initDOM(){
     }
     $("#btn_auto_apply").html(text_auto_apply);
   });
-
-  // 當 auto apply 啟動時才顯示？
-  chrome.storage.sync.get('current_font_name', function(data) {
-    $("#span_title_current_font").text(data.current_font_name);
-  });
-
 }
 
 
