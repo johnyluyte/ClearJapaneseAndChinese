@@ -30,7 +30,7 @@ function init(){
 
   /* Initialize variables */
   css_sans_serif = {
-    code: 
+    code:
     '*{font-family:"sans-serif" !important;'+
     'text-shadow:default !important;'+
     'font-weight:default !important;'+
@@ -59,7 +59,7 @@ function initButtons(){
     });
   });
 
- 
+
   $("#btn_auto_apply").click(function(event){
     var value = $("#btn_auto_apply span").attr('value');
     console.debug(value);
@@ -74,7 +74,7 @@ function initButtons(){
       showMessage("自動套用已開啟，之後開啟的頁面都會自動套用字體效果。");
     }
     $("#btn_auto_apply").html(tmp);
-  });  
+  });
 }
 
 
@@ -106,7 +106,7 @@ function getFontFamily(value){
   }
   fontFamily += '"sans-serif"';
 
-  // TODO isImportant? append" 
+  // TODO isImportant? append"
   fontFamily += ' !important';
   fontFamily += ';';
   return fontFamily;
@@ -115,7 +115,7 @@ function getFontFamily(value){
 function getSelected(){
   var fontFamily = getFontFamily($("#select_font").val());
   var selectedParameter = {
-    code: 
+    code:
     fontFamily+
       //'font-weight:' + document.getElementById("weight-customized").value + ' !important;'+
       // 'font-weight:100 !important;'+
@@ -134,12 +134,12 @@ function getSelected(){
 function applyCSS(parameter){
   /* Get the current tab the User is viewing, which is returned as tabs[0]. */
   chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
-    /* 
+    /*
        Send a message to tabs[0], telling 'content_script.js' to disable ClearJC style,
        which was added automatically by 'content_script.js' if the 'auto_apply' was 'true' in Storage.
     */
     chrome.tabs.sendMessage(tabs[0].id, { text: "msg_disable_auto_style_node" });
-  }); 
+  });
   // Apply CSS style
   chrome.tabs.insertCSS(null, parameter);
   console.debug("[applyCSS()]" + parameter.code);
