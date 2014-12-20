@@ -1,15 +1,15 @@
-/* 
+/*
 (1)
   This file (cs.js) implements the "automatically apply" function.
-  It will 
+  It will
   - Check if the "auto_apply" variable in chrome.storage.sync is true.
   - Make sure the site is not in the "excluded_lists" using Regex.
   - Create a style node: <style> our_css_rules </style>, append to <header>.
 
 (2)
   If the user "manually applies" a font setting, we have to disable the <style> node mentioned above.
-  
-  When the user "manually applies" a font setting, popup.js will send a "msg_disable_auto_style_node" Message to this file (cs.js). 
+
+  When the user "manually applies" a font setting, popup.js will send a "msg_disable_auto_style_node" Message to this file (cs.js).
   The runtime.onMessage.addListener() will listen this Message.
 
 (3)
@@ -17,9 +17,9 @@
   this file (cs.js) will be excuted everytime the user refreshes a page, visits a page or creates a tab as long as ClearJC is enabled in Chrome plug-in.
 
   As a result, if we use any 3rd-party API in this file (cs.js), we should also register them in manifest.json.
-  
+
   So, for simplicity, we use native (vanilla) javascript DOM here.
-  e.g. 
+  e.g.
     window.onload();
     document.getElementsByTagName();
 */
@@ -34,7 +34,7 @@ window.onload = function(){
       /* Load the customized css from storage */
       chrome.storage.sync.get('css_code', function(data){
         autoInjectCSS(data.css_code);
-      });  
+      });
     }
   });
 }
@@ -46,14 +46,27 @@ function isValidURL(url){
   console.debug("[content_script isValidURL()] url=" + url);
   // Remember, if we use jQuery here, we should update manifest.json to include jQuery in the "content_scripts" field.
   /* For example, if the URL "https://github.com/" is in the User's excluded lists: */
-  if(url.match(/http[s]?:\/\/*github.com\/*/)){
-    return false;
+  var excluded_lists = new Array();
+
+  /*
+    We do not need double quote "" here, because the function match(reg) requires RGEEX in its argument, and string confounded by double forward slash /MY_REG/ is the RGEEX in javascript
+  */
+  //  We do not need this: excluded_lists[0] = "/http[s]?:\/\/*github.com\/*/";
+  //  Instead we use this: excluded_lists[0] = /http[s]?:\/\/*github.com\/*/;
+  excluded_lists[0] = /http[s]?:\/\/*github.com\/*/;
+  excluded_lists[1] = /http[s]?:\/\/*class.coursera.org\/*/;
+
+  for(var i=0;i< excluded_lists.length;i++){
+    // console.log(excluded_lists[i])
+    if(url.match(excluded_lists[i])){
+      return false;
+    }
   }
   return true;
 }
 
 
-/* 
+/*
   When autoInjecting, we create a style node:
     <style> our_css_rules </style>
    and append it to the header of the page.
