@@ -49,6 +49,11 @@ https://chrome.google.com/webstore/detail/font-playground/hdpmpnhaoddjelneingmbn
 第一種是 local 端的字體，這樣中文使用者就可以選擇 微軟正黑體
 第二種是 google fonts，這樣西洋系統也可以選擇 google noto 字體
 
+但是 google fonts 基本上沒有中文，
+而因為中文字體檔案大小的關係，也找不太到免費的 web fonts
+http://en.justfont.com/fontdetail/161
+http://fundesigner.net/google-web-font/
+
 meiryo, M+
 
 
