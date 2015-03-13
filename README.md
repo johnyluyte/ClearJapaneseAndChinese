@@ -27,6 +27,16 @@ To be updated.
 
 ## Todo Lists
 
+Use web fonts if you dont have default fonts
+[radio button] default font:
+ - meriyo
+ - yahei ..
+ - etc
+[radio button] web fonts:
+ - M+
+ - tofu
+
+
 已經被別人做走了
 http://www.ghacks.net/2013/08/27/change-font-sizes-styles-website-font-changer-chrome/
 https://chrome.google.com/webstore/detail/font-changer-with-google/jgjhhoglgjdklldfgoffdiaceffijeke
